@@ -1,27 +1,20 @@
-import {Navbar, Nav, Image, Container} from 'react-bootstrap'
+import {Navbar, Nav, Image, Container, Row, Col} from 'react-bootstrap'
 import './App.css';
 import logo from "./Assets/Logo.png"
 
 function App() {
   return (
     <>
-    
-    <Navbar activeKey="/home" class='container' expand='lg' fixed='top'>
-    
-      <Navbar.Brand class='img-fluid' className='nav-logo'>
-      <Image fluid src={logo}/> 
-      </Navbar.Brand>
-      <Nav className='justify-content-right'>
-      
-        <Nav.Link href="#contact" className='contactLink' >
-         contact
-        </Nav.Link>
-       
-     
-      </Nav>
-     
-    </Navbar>
-    
+    <Container fluid className="mr-5">
+      <Row className="">
+        <Col lg={6}>
+        <Image  className="nav-logo" src={logo}/> 
+        </Col>   
+        <Col lg={6} className="contactLink mx-auto">
+          contact
+          </Col>
+      </Row>
+    </Container>
     
     </>
   );
