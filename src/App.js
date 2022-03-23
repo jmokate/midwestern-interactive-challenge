@@ -16,15 +16,14 @@ function App() {
           contact
           </Col>
       </Row>
-      <Row style={{paddingTop: "10rem"}}>
-        <CardGroup>
-         <Card className="text-center" style={{ width: '25rem',height: "25rem", backgroundColor: "#F5F5F5", borderRadius: "1%" }}>
-           <Card.Img variant="top" src={talkie} />
+      <Row style={{paddingTop: "10rem"}} >
+        <CardGroup className="justify-content-center">
+         <Card className="m-auto" style={{ width: '25rem',height: "25rem", backgroundColor: "#F5F5F5", borderRadius: "1%" }}>
+           <Card.Img  style={{padding: "5rem, 0, 0, 5rem"}} variant="top" src={talkie} />
             <Card.Body>
              <Card.Title>Card Title</Card.Title>
               <Card.Text>
-               Some quick example text to build on the card title and make up the bulk of
-               the card's content.
+               lorem kjugogo
               </Card.Text>
              <Button variant="primary">Go somewhere</Button>
             </Card.Body>
