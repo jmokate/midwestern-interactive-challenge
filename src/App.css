@@ -1,6 +1,6 @@
 body {
 	background-color: #222222;
-	padding: 75px;
+	padding: 5%;
 }
 
 @font-face {
@@ -8,18 +8,55 @@ body {
 	src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
 }
 
+.cards {
+	background-color: #F5F5F5;
+}
+
+.card-img-talkie {
+	height: 100px;
+	width: 50px;
+}
+.card-img-rabbit {
+	height: 65px;
+	width: 100px;
+}
+.card-img-shield {
+	height: 100px;
+	width: 100px;
+}
+
+/* @media (min-width: 320px) and (max-width: 800px) {
+	.nav-logo{
+		max-width: 100%;
+    	width: 100%;
+    
+	}
+	.contactLink {
+		color: #debf79;
+		text-decoration: none;
+		font-weight: bold;
+		
+	}
+	
+
+} */
+
 .contactLink {
 	color: #debf79;
 	text-decoration: none;
 	font-weight: bold;
-	padding-top: 15px;
+	
 	font-size: 20px;
-	float: right;
+	
 }
 
-.nav-logo {
+/* .nav-logo {
 	float: left;
-}
+} */
+
+/* .card-img {
+	margin: auto;
+} */
 /* Container {
 	display: inline-flex ;
 } */

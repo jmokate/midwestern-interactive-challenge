@@ -1,25 +1,72 @@
-import {Navbar, Nav, Image, Container, Row, Col, Card, Button, CardGroup} from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Container, Row, Col, Card, Button} from 'react-bootstrap'
 import './App.css';
 import logo from "./Assets/Logo.png"
 import talkie from "./Assets/Talkie.png"
+import rabbit from "./Assets/Rabbit.png"
+import shield from "./Assets/Shield.png"
 
 function App() {
   return (
     <>
     
-    <Container className=".container-md">
-      <Row className="">
-        <Col lg={6}>
-        <img  className="nav-logo" src={logo}/> 
+    <Container>
+      <Row className="flex-nowrap">
+        <Col md={6} sm={6} xs={6} align="left">
+        <img  className="nav-logo img-fluid" src={logo}/> 
         </Col>   
-        <Col lg={6} className="contactLink mx-auto">
+        <Col md={6} sm={6} xs={6} className="contactLink" align="right">
           contact
           </Col>
       </Row>
-      <Row style={{paddingTop: "10rem"}} >
-        <CardGroup className="justify-content-center">
-         <Card className="m-auto" style={{ width: '25rem',height: "25rem", backgroundColor: "#F5F5F5", borderRadius: "1%" }}>
-           <Card.Img  style={{padding: "5rem, 0, 0, 5rem"}} variant="top" src={talkie} />
+      </Container>
+      <Container style={{paddingTop: "3%"}}>
+        <Row>
+          <Col className='mx-auto'>
+            <Card className="cards text-center" style={{backgroundColor: "#F5F5F5", borderRadius: "1%" }}>
+            <Card.Img className="card-img-talkie img-fluid" variant="top" align='center' src={talkie} />
+              <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                lorem kjugogo
+                </Card.Text>
+              <Button variant="primary">Go somewhere</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col>
+            <Card className="text-center" style={{backgroundColor: "#F5F5F5", borderRadius: "1%" }}>
+                <Card.Img className="card-img-rabbit img-fluid" variant="top" src={rabbit} />
+                  <Card.Body>
+                  <Card.Title>Card Title</Card.Title>
+                    <Card.Text>
+                    lorem kjugogo
+                    </Card.Text>
+                  <Button variant="primary">Go somewhere</Button>
+                  </Card.Body>
+                </Card>
+          </Col>
+          <Col>
+              <Card className="text-center" style={{backgroundColor: "#F5F5F5", borderRadius: "1%" }}>
+                <Card.Img className="card-img-shield img-fluid" variant="top" src={shield} />
+                  <Card.Body>
+                  <Card.Title>Card Title</Card.Title>
+                    <Card.Text>
+                    lorem kjugogo
+                    </Card.Text>
+                  <Button variant="primary">Go somewhere</Button>
+                  </Card.Body>
+              </Card>
+          </Col>
+        </Row>
+      </Container>
+
+
+      {/* <Container>
+      <Row style={{paddingTop: "10rem"}} className="text-center" >
+        <CardGroup className="text-center">
+         <Card className="text-center" style={{backgroundColor: "#F5F5F5", borderRadius: "1%" }}>
+           <Card.Img className="card-img img-fluid" variant="top" src={talkie} />
             <Card.Body>
              <Card.Title>Card Title</Card.Title>
               <Card.Text>
@@ -27,7 +74,7 @@ function App() {
               </Card.Text>
              <Button variant="primary">Go somewhere</Button>
             </Card.Body>
-          </Card>
+          </Card> */}
 
           {/* <Card className="text-center" style={{ width: '25rem',height: "25rem", backgroundColor: "#F5F5F5", borderRadius: "1%" }}>
            <Card.Img variant="top" src={talkie} />
@@ -40,14 +87,10 @@ function App() {
              <Button variant="primary">Go somewhere</Button>
             </Card.Body>
           </Card> */}
-        </CardGroup>
-      
-
-
-
+        {/* </CardGroup>
       </Row>
-      
-    </Container>
+      </Container> */}
+    
     
     </>
   );
