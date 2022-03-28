@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
 body {
 	background-color: #222222;
-	padding: 75px;
+	padding: 5%;
 }
 
 @font-face {
@@ -9,22 +9,44 @@ body {
 	src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
 }
 
+.cards {
+	background-color: #f5f5f5;
+	border-radius: 1%;
+	padding: 5%;
+	width: 25rem;
+	height: 25rem;
+	text-align: center;
+}
+
 .contactLink {
 	color: #debf79;
 	text-decoration: none;
 	font-weight: bold;
-	padding-top: 15px;
 	font-size: 20px;
-	float: right;
+	padding-right: 2rem;
 }
 
-.nav-logo {
-	float: left;
+@media (max-width: 767px) {
+	h1 {
+		text-align: left;
+	}
 }
 
 .card-text {
 	color: #858585;
 }
-/* Container {
-	display: inline-flex ;
+
+.btn {
+	/* outline: none !important; */
+
+	background-color: #debf79;
+	color: #f5f5f5;
+	border-radius: 0;
+	height: 3rem;
+	width: 8rem;
+	margin-top: 1rem;
+}
+/* .btn:focus {
+	outline: none !important;
+	box-shadow: none !important;
 } */

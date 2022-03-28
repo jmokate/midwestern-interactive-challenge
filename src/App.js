@@ -1,61 +1,83 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Navbar, Nav, Image, Container, Row, Col, Card, Button, CardGroup} from 'react-bootstrap'
+
+import {Container, Row, Col, Card, Button, Image} from 'react-bootstrap';
 import './App.css';
 import logo from "./Assets/Logo.png"
+//import Cards from './Cards.js'
 import talkie from "./Assets/Talkie.png"
+import rabbit from "./Assets/Rabbit.png"
+import shield from "./Assets/Shield.png"
 
 function App() {
   return (
     <>
     
-    <Container className=".container-md">
-      <Row className="">
-        <Col lg={6}>
-        <img  className="nav-logo" src={logo}/> 
+    <Container>
+      <Row className="flex-nowrap">
+        <Col md={6} sm={6} xs={6} align="left">
+        <img  className="nav-logo img-fluid" src={logo}/> 
         </Col>   
-        <Col lg={6} className="contactLink mx-auto">
+        <Col md={6} sm={6} xs={6} className="contactLink" align="right">
           contact
           </Col>
       </Row>
       </Container>
-      <Container>
-      <Row style={{paddingTop: "10rem"}} >
-        <CardGroup className="justify-content-center">
-         <Card align="center" style={{ backgroundColor: "#F5F5F5", borderRadius: "1%" }}>
-           <Card.Img variant="top" src={talkie} style={{paddingTop: "2rem", height: "50vh"}} />
-            <Card.Body>
-             <h1 style={{fontSize: "2.5rem"}} >Heading Two</h1>
-              <Card.Text className="card-text" align="left">
-               integer accumsan molestie nisl, id faucibus urna accumsan quis. Prion vulputate, mauris semper maximus.
-              </Card.Text>
-             <Button variant="primary">Learn More</Button>
-            </Card.Body>
-          </Card>
-          
-          </CardGroup>
-          </Row>
+    
+      <Container className="px-4" style={{paddingTop: "3%"}}>
+        <Row >
+          <Col className='mb-2'>
+            <Card className="cards">
+              <div>
+                <Image src={talkie} style={{ objectFit: 'none', marginTop: '10px' }} alt="talkie" />
+              </div>
+              <Card.Body>
+                <Card.Title><h1 style={{fontWeight: 'bold'}}>Heading Two</h1></Card.Title>
+                <Card.Text>
+                  <p style={{textAlign: 'left'}}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod, tempor incididunt ut labore et dolore
+                  </p>
+                </Card.Text>
+                
+                <button className="btn">Learn More</button>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col className='mb-2'>
+            <Card className="cards">
+              <div >
+                <Image src={rabbit} style={{ objectFit: 'none', marginTop: '2rem' }} alt="rabbit" />
+              </div>
+              <Card.Body style={{paddingTop: '10%'}}>
+                <Card.Title><h1 style={{fontWeight: 'bold'}}>Heading Two</h1></Card.Title>
+                <Card.Text>
+                  <p style={{textAlign: 'left'}}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod, tempor incididunt ut labore et dolore
+                  </p>
+                </Card.Text>
+                <button className="btn">Learn More</button>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col className='mb-2'>
+            <Card className="cards">
+              <div style={{ textAlign: 'center' }}>
+                <Image src={shield} style={{ objectFit: 'none', marginTop: '10px' }} alt="shield" />
+              </div>
+              <Card.Body>
+                <Card.Title><h1 style={{fontWeight: 'bold'}}>Heading Two</h1></Card.Title>
+                <Card.Text>
+                  <p style={{textAlign: 'left'}}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod, tempor incididunt ut labore et dolore
+                </p>
+                </Card.Text>
+                <button className="btn">Learn More</button>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
       </Container>
-      
-
-          {/* <Card className="text-center" style={{ width: '25rem',height: "25rem", backgroundColor: "#F5F5F5", borderRadius: "1%" }}>
-           <Card.Img variant="top" src={talkie} />
-            <Card.Body>
-             <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-               Some quick example text to build on the card title and make up the bulk of
-               the card's content.
-              </Card.Text>
-             <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card> */}
         
-      
-
-
-
-    
-      
-    
+       
     
     </>
   );
