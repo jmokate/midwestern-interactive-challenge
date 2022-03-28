@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar, Nav, Image, Container, Row, Col, Card, Button, CardGroup} from 'react-bootstrap'
 import './App.css';
 import logo from "./Assets/Logo.png"
@@ -16,18 +17,25 @@ function App() {
           contact
           </Col>
       </Row>
+      </Container>
+      <Container>
       <Row style={{paddingTop: "10rem"}} >
         <CardGroup className="justify-content-center">
-         <Card className="m-auto" style={{ width: '25rem',height: "25rem", backgroundColor: "#F5F5F5", borderRadius: "1%" }}>
-           <Card.Img  style={{padding: "5rem, 0, 0, 5rem"}} variant="top" src={talkie} />
+         <Card align="center" style={{ backgroundColor: "#F5F5F5", borderRadius: "1%" }}>
+           <Card.Img variant="top" src={talkie} style={{paddingTop: "2rem", height: "50vh"}} />
             <Card.Body>
-             <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-               lorem kjugogo
+             <h1 style={{fontSize: "2.5rem"}} >Heading Two</h1>
+              <Card.Text className="card-text" align="left">
+               integer accumsan molestie nisl, id faucibus urna accumsan quis. Prion vulputate, mauris semper maximus.
               </Card.Text>
-             <Button variant="primary">Go somewhere</Button>
+             <Button variant="primary">Learn More</Button>
             </Card.Body>
           </Card>
+          
+          </CardGroup>
+          </Row>
+      </Container>
+      
 
           {/* <Card className="text-center" style={{ width: '25rem',height: "25rem", backgroundColor: "#F5F5F5", borderRadius: "1%" }}>
            <Card.Img variant="top" src={talkie} />
@@ -40,14 +48,14 @@ function App() {
              <Button variant="primary">Go somewhere</Button>
             </Card.Body>
           </Card> */}
-        </CardGroup>
+        
       
 
 
 
-      </Row>
+    
       
-    </Container>
+    
     
     </>
   );

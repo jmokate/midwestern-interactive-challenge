@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
 body {
 	background-color: #222222;
 	padding: 75px;
@@ -19,6 +20,10 @@ body {
 
 .nav-logo {
 	float: left;
+}
+
+.card-text {
+	color: #858585;
 }
 /* Container {
 	display: inline-flex ;
