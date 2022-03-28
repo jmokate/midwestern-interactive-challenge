@@ -26,9 +26,7 @@ body {
 }
 
 @media (max-width: 767px) {
-	.cards {
-		height: 65vh;
-	}
+
 }
 
 

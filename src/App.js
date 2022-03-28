@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Container, Row, Col, Card, Button, Image} from 'react-bootstrap'
 import './App.css';
 import logo from "./Assets/Logo.png"
+//import Cards from './Cards.js'
 import talkie from "./Assets/Talkie.png"
 import rabbit from "./Assets/Rabbit.png"
 import shield from "./Assets/Shield.png"
@@ -21,39 +22,58 @@ function App() {
       </Row>
       </Container>
     
-      <Container className="px-4" style={{paddingTop: "3%", maxHeight:'14rem'}}>
-        <Row style={{maxHeight: '15rem'}} >
-          <Col >
-      <Card className="cards" style={{ width: '18rem' }}>
-
-  <Image src={talkie} className="card-img-top" alt="talkie" fluid />
-  <Card.Body>
-    <Card.Title>Card Title</Card.Title>
-    <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
-  </Card.Body>
-</Card>
-</Col>
-<Col>
-<Card style={{ width: '18rem'}}>
-  <div>
-  <Card.Img src={talkie} />
-  </div>
-  <Card.Body>
-    <Card.Title>Card Title</Card.Title>
-    <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
-  </Card.Body>
-</Card>
-</Col>
-</Row>
-</Container>
+      <Container className="px-4" style={{paddingTop: "3%"}}>
+        <Row >
+          <Col className='mb-2'>
+            <Card className="cards" style={{ width: '25rem', height: '25rem' }}>
+              <div style={{ textAlign: 'center' }}>
+                <Image src={talkie} style={{ objectFit: 'none', marginTop: '10px' }} alt="talkie" />
+              </div>
+              <Card.Body>
+                <Card.Title><h1>Heading Two</h1></Card.Title>
+                <Card.Text>
+                  <p>
+                  Integer accumsan molestie nisl, id faucibus urna accumsan quis. Proin vulputate, mauris semper maximus.
+                  </p>
+                </Card.Text>
+                <Button variant="primary">Go somewhere</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col className='mb-2'>
+            <Card className="cards" style={{ width: '25rem', height: '25rem' }}>
+              <div style={{ textAlign: 'center' }}>
+                <Image src={rabbit} style={{ objectFit: 'none', marginTop: '2rem' }} alt="talkie" />
+              </div>
+              <Card.Body>
+                <Card.Title><h1>Heading Two</h1></Card.Title>
+                <Card.Text>
+                  <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod, tempor incididunt ut labore et dolore
+                  </p>
+                </Card.Text>
+                <Button variant="primary">Go somewhere</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col className='mb-2'>
+            <Card className="cards" style={{ width: '25rem', height: '25rem' }}>
+              <div style={{ textAlign: 'center' }}>
+                <Image src={shield} style={{ objectFit: 'none', marginTop: '10px' }} alt="talkie" />
+              </div>
+              <Card.Body>
+                <Card.Title><h1>Heading Two</h1></Card.Title>
+                <Card.Text>
+                  <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod, tempor incididunt ut labore et dolore
+                </p>
+                </Card.Text>
+                <Button variant="primary">Go somewhere</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
         
         {/* <Container>
         <Row className="gx-5 d-flex align-items-end">
