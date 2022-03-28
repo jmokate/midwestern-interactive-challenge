@@ -1,6 +1,7 @@
 body {
 	background-color: #222222;
 	padding: 5%;
+	
 }
 
 @font-face {
@@ -10,53 +11,24 @@ body {
 
 .cards {
 	background-color: #F5F5F5;
-}
-
-.card-img-talkie {
-	height: 100px;
-	width: 50px;
-}
-.card-img-rabbit {
-	height: 65px;
-	width: 100px;
-}
-.card-img-shield {
-	height: 100px;
-	width: 100px;
-}
-
-/* @media (min-width: 320px) and (max-width: 800px) {
-	.nav-logo{
-		max-width: 100%;
-    	width: 100%;
-    
-	}
-	.contactLink {
-		color: #debf79;
-		text-decoration: none;
-		font-weight: bold;
-		
-	}
+	border-radius: 1%;
 	
-
-} */
+	padding-top: 5%;
+	
+}
 
 .contactLink {
 	color: #debf79;
 	text-decoration: none;
 	font-weight: bold;
-	
 	font-size: 20px;
 	
 }
 
-/* .nav-logo {
-	float: left;
-} */
+@media (max-width: 767px) {
+	.cards {
+		height: 65vh;
+	}
+}
 
-/* .card-img {
-	margin: auto;
-} */
-/* Container {
-	display: inline-flex ;
-} */
+

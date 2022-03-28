@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Container, Row, Col, Card, Button} from 'react-bootstrap'
+import {Container, Row, Col, Card, Button, Image} from 'react-bootstrap'
 import './App.css';
 import logo from "./Assets/Logo.png"
 import talkie from "./Assets/Talkie.png"
@@ -20,75 +20,70 @@ function App() {
           </Col>
       </Row>
       </Container>
-      <Container style={{paddingTop: "3%"}}>
-        <Row>
-          <Col className='mx-auto'>
-            <Card className="cards text-center" style={{backgroundColor: "#F5F5F5", borderRadius: "1%" }}>
-            <Card.Img className="card-img-talkie img-fluid" variant="top" align='center' src={talkie} />
-              <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                lorem kjugogo
-                </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
+    
+      <Container className="px-4" style={{paddingTop: "3%", maxHeight:'14rem'}}>
+        <Row style={{maxHeight: '15rem'}} >
+          <Col >
+      <Card className="cards" style={{ width: '18rem' }}>
+
+  <Image src={talkie} className="card-img-top" alt="talkie" fluid />
+  <Card.Body>
+    <Card.Title>Card Title</Card.Title>
+    <Card.Text>
+      Some quick example text to build on the card title and make up the bulk of
+      the card's content.
+    </Card.Text>
+    <Button variant="primary">Go somewhere</Button>
+  </Card.Body>
+</Card>
+</Col>
+<Col>
+<Card style={{ width: '18rem'}}>
+  <div>
+  <Card.Img src={talkie} />
+  </div>
+  <Card.Body>
+    <Card.Title>Card Title</Card.Title>
+    <Card.Text>
+      Some quick example text to build on the card title and make up the bulk of
+      the card's content.
+    </Card.Text>
+    <Button variant="primary">Go somewhere</Button>
+  </Card.Body>
+</Card>
+</Col>
+</Row>
+</Container>
+        
+        {/* <Container>
+        <Row className="gx-5 d-flex align-items-end">
+       
+          <Col sm={4} className='text-center p-3' align="center" >
+            <div className="cards" >
+            <img src={talkie} />
+            <h1>Title</h1>
+            <p>lorem ipsum fuck it</p>
+            <Button>Go Somewhere</Button>
+            </div>
           </Col>
-          <Col>
-            <Card className="text-center" style={{backgroundColor: "#F5F5F5", borderRadius: "1%" }}>
-                <Card.Img className="card-img-rabbit img-fluid" variant="top" src={rabbit} />
-                  <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                    lorem kjugogo
-                    </Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
-                  </Card.Body>
-                </Card>
+          <Col sm={4} className='text-center p-3' >
+            <div className="cards" >
+            <img src={rabbit} />
+            <h1>Title</h1>
+            <p>lorem ipsum fuck it</p>
+            <Button>Go Somewhere</Button>
+            </div>
           </Col>
-          <Col>
-              <Card className="text-center" style={{backgroundColor: "#F5F5F5", borderRadius: "1%" }}>
-                <Card.Img className="card-img-shield img-fluid" variant="top" src={shield} />
-                  <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                    lorem kjugogo
-                    </Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
-                  </Card.Body>
-              </Card>
+          <Col sm={4} className='text-center p-3'>
+            <div className="cards">
+            <img src={shield} />
+            <h1>Title</h1>
+            <p>lorem ipsum fuck it</p>
+            <Button>Go Somewhere</Button>
+            </div>
           </Col>
         </Row>
-      </Container>
-
-
-      {/* <Container>
-      <Row style={{paddingTop: "10rem"}} className="text-center" >
-        <CardGroup className="text-center">
-         <Card className="text-center" style={{backgroundColor: "#F5F5F5", borderRadius: "1%" }}>
-           <Card.Img className="card-img img-fluid" variant="top" src={talkie} />
-            <Card.Body>
-             <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-               lorem kjugogo
-              </Card.Text>
-             <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card> */}
-
-          {/* <Card className="text-center" style={{ width: '25rem',height: "25rem", backgroundColor: "#F5F5F5", borderRadius: "1%" }}>
-           <Card.Img variant="top" src={talkie} />
-            <Card.Body>
-             <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-               Some quick example text to build on the card title and make up the bulk of
-               the card's content.
-              </Card.Text>
-             <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card> */}
-        {/* </CardGroup>
-      </Row>
+      
       </Container> */}
     
     
