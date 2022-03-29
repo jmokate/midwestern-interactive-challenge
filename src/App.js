@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import HomeMenu from './Components/HomeMenu.js'
+import Cards from './Components/Cards.js'
 import {Container, Row, Col, Card, Button, Image} from 'react-bootstrap';
 import './App.css';
 import logo from "./Assets/Logo.png"
@@ -13,68 +14,15 @@ function App() {
     <>
     
     <Container>
-      <Row className="flex-nowrap">
-        <Col md={6} sm={6} xs={6} align="left">
-        <img  className="nav-logo img-fluid" src={logo}/> 
-        </Col>   
-        <Col md={6} sm={6} xs={6} className="contactLink" align="right">
-          contact
-          </Col>
-      </Row>
-      </Container>
+      <HomeMenu src={logo} />
+    </Container>
     
       <Container className="px-4" style={{paddingTop: "3%"}}>
-        <Row >
-          <Col className='mb-2'>
-            <Card className="cards">
-              <div>
-                <Image src={talkie} style={{ objectFit: 'none', marginTop: '10px' }} alt="talkie" />
-              </div>
-              <Card.Body>
-                <Card.Title><h1 style={{fontWeight: 'bold', textAlign: 'left'}}>Heading Two</h1></Card.Title>
-                <Card.Text>
-                  <p style={{textAlign: 'left'}}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod, tempor incididunt ut labore et dolore
-                  </p>
-                </Card.Text>
-                
-                <button className="btn">Learn More</button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col className='mb-2'>
-            <Card className="cards">
-              <div >
-                <Image src={rabbit} style={{ objectFit: 'none', marginTop: '2rem' }} alt="rabbit" />
-              </div>
-              <Card.Body style={{paddingTop: '10%'}}>
-                <Card.Title><h1 style={{fontWeight: 'bold', textAlign: 'left'}}>Heading Two</h1></Card.Title>
-                <Card.Text>
-                  <p style={{textAlign: 'left'}}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod, tempor incididunt ut labore et dolore
-                  </p>
-                </Card.Text>
-                <button className="btn">Learn More</button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col className='mb-2'>
-            <Card className="cards">
-              <div style={{ textAlign: 'center' }}>
-                <Image src={shield} style={{ objectFit: 'none', marginTop: '10px' }} alt="shield" />
-              </div>
-              <Card.Body>
-                <Card.Title><h1 style={{fontWeight: 'bold', textAlign: 'left'}}>Heading Two</h1></Card.Title>
-                <Card.Text>
-                  <p style={{textAlign: 'left'}}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod, tempor incididunt ut labore et dolore
-                </p>
-                </Card.Text>
-                <button className="btn">Learn More</button>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
+        <Cards
+          talkie={talkie}
+          rabbit={rabbit}
+          shield={shield}
+         />
       </Container>
       <Container className="px-4 mt-5">
         <Row>
