@@ -13,11 +13,11 @@ function Cards(props) {
               </div>
               <Card.Body>
                 <Card.Title><h1 style={{fontWeight: 'bold', textAlign: 'left'}}>Heading Two</h1></Card.Title>
-                <Card.Text>
+              
                   <p style={{textAlign: 'left'}}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod, tempor incididunt ut labore et dolore
                   </p>
-                </Card.Text>
+                
                 
                 <button className="btn">Learn More</button>
               </Card.Body>
@@ -30,11 +30,11 @@ function Cards(props) {
               </div>
               <Card.Body style={{paddingTop: '10%'}}>
                 <Card.Title><h1 style={{fontWeight: 'bold', textAlign: 'left'}}>Heading Two</h1></Card.Title>
-                <Card.Text>
+              
                   <p style={{textAlign: 'left'}}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod, tempor incididunt ut labore et dolore
                   </p>
-                </Card.Text>
+                
                 <button className="btn">Learn More</button>
               </Card.Body>
             </Card>
@@ -46,11 +46,11 @@ function Cards(props) {
               </div>
               <Card.Body>
                 <Card.Title><h1 style={{fontWeight: 'bold', textAlign: 'left'}}>Heading Two</h1></Card.Title>
-                <Card.Text>
+              
                   <p style={{textAlign: 'left'}}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod, tempor incididunt ut labore et dolore
-                </p>
-                </Card.Text>
+                  </p>
+                
                 <button className="btn">Learn More</button>
               </Card.Body>
             </Card>
