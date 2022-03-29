@@ -31,7 +31,7 @@ function App() {
                 <Image src={talkie} style={{ objectFit: 'none', marginTop: '10px' }} alt="talkie" />
               </div>
               <Card.Body>
-                <Card.Title><h1 style={{fontWeight: 'bold'}}>Heading Two</h1></Card.Title>
+                <Card.Title><h1 style={{fontWeight: 'bold', textAlign: 'left'}}>Heading Two</h1></Card.Title>
                 <Card.Text>
                   <p style={{textAlign: 'left'}}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod, tempor incididunt ut labore et dolore
@@ -48,7 +48,7 @@ function App() {
                 <Image src={rabbit} style={{ objectFit: 'none', marginTop: '2rem' }} alt="rabbit" />
               </div>
               <Card.Body style={{paddingTop: '10%'}}>
-                <Card.Title><h1 style={{fontWeight: 'bold'}}>Heading Two</h1></Card.Title>
+                <Card.Title><h1 style={{fontWeight: 'bold', textAlign: 'left'}}>Heading Two</h1></Card.Title>
                 <Card.Text>
                   <p style={{textAlign: 'left'}}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod, tempor incididunt ut labore et dolore
@@ -64,7 +64,7 @@ function App() {
                 <Image src={shield} style={{ objectFit: 'none', marginTop: '10px' }} alt="shield" />
               </div>
               <Card.Body>
-                <Card.Title><h1 style={{fontWeight: 'bold'}}>Heading Two</h1></Card.Title>
+                <Card.Title><h1 style={{fontWeight: 'bold', textAlign: 'left'}}>Heading Two</h1></Card.Title>
                 <Card.Text>
                   <p style={{textAlign: 'left'}}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod, tempor incididunt ut labore et dolore
@@ -75,6 +75,15 @@ function App() {
             </Card>
           </Col>
         </Row>
+      </Container>
+      <Container className="px-4 mt-5">
+        <Row>
+          <Col style={{}}>
+          <h1 style={{color: '#f5f5f5', fontSize: '50px', fontWeight: 'bold'}}>Heading One</h1>
+          <hr style={{color: '#debf79', width: "12rem", height: '5%', opacity: '100'}}/>
+          </Col>
+        </Row>
+        
       </Container>
         
        
