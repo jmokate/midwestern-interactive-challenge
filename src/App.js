@@ -20,11 +20,15 @@ console.log(usersArray, 'hi');
 
 function App() {
 
-  // const [isList, setList] = useState(false);
-  let isList = true;
-  const displayList = () => {
-    isList = true;
-  }
+ const [isList, setList] = useState(false);
+ 
+
+ function handleClick(event) {
+   if (isList) {alert("List is already displayed.")}
+   console.log(event)
+   setList(true)
+
+ }
 
   return (
     <>
@@ -44,11 +48,11 @@ function App() {
         <Row>
           <Col style={{}}>
           <h1 style={{color: '#f5f5f5', fontSize: '50px', fontWeight: 'bold'}}>Heading One</h1>
-          <hr style={{color: '#debf79', width: "12rem", height: '5%', opacity: '100'}}/>
-          <p style={{color: '#f5f5f5'}} >Click here</p>
-          <ul style={{color: '#f5f5f5'}} onClick={displayList()}>
+          <hr style={{color: '#debf79', width: "12rem", height: '.5rem', opacity: '100'}}/>
+          <p style={{color: '#f5f5f5'}} onClick={(e) => handleClick(e)} >Click here for the users list.</p>
+          <ul style={{color: '#f5f5f5'}} >
 
-            { isList ? usersArray.map(user =>  <li key={user}>{user}</li>) : 'something is weird'}
+             { isList ? usersArray.map(user =>  <li key={user}>{user}</li>) : ''}
           </ul>
           </Col>
         </Row>
