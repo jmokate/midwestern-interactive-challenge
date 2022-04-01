@@ -1,7 +1,7 @@
 import react from "react";
 import {Row, Col, Card, Image} from 'react-bootstrap'
 
-function Cards(props) {
+function Cards({talkie, rabbit, shield}) {
 
   return(
     <>
@@ -9,7 +9,7 @@ function Cards(props) {
           <Col className='mb-2'>
             <Card className="cards">
               <div>
-                <Image src={props.talkie} style={{ objectFit: 'none', marginTop: '10px' }} alt="talkie" />
+                <Image src={talkie} style={{ objectFit: 'none', marginTop: '10px' }} alt="talkie" />
               </div>
               <Card.Body>
                 <Card.Title><h1 style={{fontWeight: 'bold', textAlign: 'left'}}>Heading Two</h1></Card.Title>
@@ -26,7 +26,7 @@ function Cards(props) {
           <Col className='mb-2'>
             <Card className="cards">
               <div >
-                <Image src={props.rabbit} style={{ objectFit: 'none', marginTop: '2rem' }} alt="rabbit" />
+                <Image src={rabbit} style={{ objectFit: 'none', marginTop: '2rem' }} alt="rabbit" />
               </div>
               <Card.Body style={{paddingTop: '10%'}}>
                 <Card.Title><h1 style={{fontWeight: 'bold', textAlign: 'left'}}>Heading Two</h1></Card.Title>
@@ -42,7 +42,7 @@ function Cards(props) {
           <Col className='mb-2'>
             <Card className="cards">
               <div style={{ textAlign: 'center' }}>
-                <Image src={props.shield} style={{ objectFit: 'none', marginTop: '10px' }} alt="shield" />
+                <Image src={shield} style={{ objectFit: 'none', marginTop: '10px' }} alt="shield" />
               </div>
               <Card.Body>
                 <Card.Title><h1 style={{fontWeight: 'bold', textAlign: 'left'}}>Heading Two</h1></Card.Title>

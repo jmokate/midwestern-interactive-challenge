@@ -23,13 +23,17 @@ body {
 	text-decoration: none;
 	font-weight: bold;
 	font-size: 20px;
-	padding-right: 2rem;
+	padding-right: 3rem;
 }
 
 @media (max-width: 767px) {
 	h1 {
 		text-align: left;
 	}
+	.contactLink {
+		padding-right: 1.5rem;
+	}
+
 }
 
 .card-text {
@@ -46,7 +50,4 @@ body {
 	width: 8rem;
 	margin-top: 1rem;
 }
-/* .btn:focus {
-	outline: none !important;
-	box-shadow: none !important;
-} */
+

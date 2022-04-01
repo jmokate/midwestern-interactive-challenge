@@ -1,10 +1,10 @@
-import react from 'react';
+import React from 'react';
 import {Row, Col} from 'react-bootstrap'
 import '../App.css'
 import {Link} from 'react-router-dom';
 
 
-function HomeMenu(props) {
+function ContactMenu(props) {
 
 
   return(
@@ -15,8 +15,8 @@ function HomeMenu(props) {
         </Col>   
         
         <Col md={6} sm={6} xs={6} className="my-auto" align='right' style={{marginRight: '5rem'}}>
-          <Link className="contactLink" to='/contact'>
-            contact
+          <Link className="contactLink" to='/'>
+            home
           </Link>
         </Col>
       </Row>
@@ -24,4 +24,4 @@ function HomeMenu(props) {
   )
 }
 
-export default HomeMenu;
+export default ContactMenu;
