@@ -1,19 +1,21 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomeMenu from './HomeMenu.js';
 import Cards from './Cards.js';
 import UsersList from './UsersList.js'
-import {Container, Row, Col, Card, Button, Image} from 'react-bootstrap';
+import {Container} from 'react-bootstrap';
 import '../App.css';
 import logo from "../Assets/Logo.png";
-//import Cards from './Cards.js'
 import talkie from "../Assets/Talkie.png";
 import rabbit from "../Assets/Rabbit.png";
 import shield from "../Assets/Shield.png";
 import usersArray from '../Users.js';
 
 
+
 function Home() {
+
+
 
  const [isList, setList] = useState(false);
  
@@ -26,12 +28,14 @@ function Home() {
 
   return (
     <>
+    <Container fluid className="homeBody">
+
     
     <Container>
       <HomeMenu src={logo} />
     </Container>
     
-      <Container className="px-4" style={{paddingTop: "3%"}}>
+      <Container className="px-4" style={{paddingTop: "3rem"}}>
         <Cards
           talkie={talkie}
           rabbit={rabbit}
@@ -44,6 +48,7 @@ function Home() {
           isList={isList}
           usersArray={usersArray}
         />
+      </Container>
       </Container>
     </>
   );

@@ -1,5 +1,6 @@
 import react from "react";
 import {Row, Col, Card, Image} from 'react-bootstrap'
+import '../App.css';
 
 function Cards({talkie, rabbit, shield}) {
 
@@ -19,7 +20,7 @@ function Cards({talkie, rabbit, shield}) {
                   </p>
                 
                 
-                <button className="btn">Learn More</button>
+                <button className="card-btn">Learn More</button>
               </Card.Body>
             </Card>
           </Col>
@@ -35,7 +36,7 @@ function Cards({talkie, rabbit, shield}) {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod, tempor incididunt ut labore et dolore
                   </p>
                 
-                <button className="btn">Learn More</button>
+                <button className="card-btn">Learn More</button>
               </Card.Body>
             </Card>
           </Col>
@@ -51,7 +52,7 @@ function Cards({talkie, rabbit, shield}) {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod, tempor incididunt ut labore et dolore
                   </p>
                 
-                <button className="btn">Learn More</button>
+                <button className="card-btn">Learn More</button>
               </Card.Body>
             </Card>
           </Col>

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
 
 
-body {
+.homeBody {
 	background-color: #222222;
 	padding: 5%;
 }
@@ -29,7 +29,7 @@ body {
 }
 
 @media (max-width: 767px) {
-	body {
+	.homeBody {
 		height: 100%;
 		background-color: #222222;
 	}
@@ -46,9 +46,10 @@ body {
 	color: #858585;
 }
 
-.btn {
+.card-btn {
 	/* outline: none !important; */
-
+	outline: none;
+	border: none;
 	background-color: #debf79;
 	color: #f5f5f5;
 	border-radius: 0;

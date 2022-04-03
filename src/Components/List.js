@@ -1,5 +1,6 @@
 import react from 'react';
 import {Row, Col} from 'react-bootstrap';
+import '../App';
 
 function List(props) {
 
