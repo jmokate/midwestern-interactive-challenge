@@ -19,9 +19,9 @@ function Contact() {
         <ContactMenu src={Logo} />
       </Container>
 
-      <Container>
-        <Row>
-          <Col sm={12} md={6}>
+      <Container   >
+        <Row   >
+          <Col sm={12} md={6} className='my-auto'  >
           <h1 style={{color: '#f5f5f5', fontSize: '50px', fontWeight: 'bold'}}>Heading One</h1>
             <hr style={{color: '#debf79', width: "12.5rem", height: '4px', opacity: '100', marginTop: '-1px'}}/>
             <p style={{color: '#f5f5f5', fontSize: '17px'}}>
@@ -33,7 +33,7 @@ function Contact() {
               varius duis at consectetur lorem.
             </p>
           </Col>
-          <Col sm={12} md={6}>
+          <Col sm={12} md={6} align='center' >
             <ContactForm />
           </Col>
         </Row>

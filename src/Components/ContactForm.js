@@ -7,10 +7,10 @@ function ContactForm() {
     return(
         <>
         
-        <Row className='contactHeaderMargin'>
+         <Row className='contactHeaderMargin' >
             <Col align='center'>
-                <h1 align='left' style={{fontSize:"40px", fontWeight: 'bold', marginBottom: '2rem'}}>Heading Two</h1>
-                <form>
+                <h1 className='formTitle formTitleSmall' >Heading Two</h1>
+                <form  >
                     <input type='text' name='firstName' placeholder='First Name' className='formControl' />
                     <input type='text' name='lastName' placeholder='Last Name' className='formControl' />
                     <input type='text' name='email' placeholder='Email' className='formControl' />
@@ -19,8 +19,8 @@ function ContactForm() {
                     <button type='submit' className='contact-btn'>Submit</button>
                 </form>
                
-            </Col>
-        </Row>
+             </Col>
+        </Row> 
        
         </>
     )
