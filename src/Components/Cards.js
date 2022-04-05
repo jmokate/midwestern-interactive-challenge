@@ -15,7 +15,7 @@ function Cards({talkie, rabbit, shield}) {
               <Card.Body>
                 <Card.Title><h1 style={{fontWeight: 'bold', textAlign: 'left'}}>Heading Two</h1></Card.Title>
               
-                  <p style={{textAlign: 'left'}}>
+                  <p className="card-text" style={{textAlign: 'left'}}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod, tempor incididunt ut labore et dolore
                   </p>
                 
@@ -32,7 +32,7 @@ function Cards({talkie, rabbit, shield}) {
               <Card.Body style={{paddingTop: '10%'}}>
                 <Card.Title><h1 style={{fontWeight: 'bold', textAlign: 'left'}}>Heading Two</h1></Card.Title>
               
-                  <p style={{textAlign: 'left'}}>
+                  <p className="card-text" style={{textAlign: 'left'}}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod, tempor incididunt ut labore et dolore
                   </p>
                 
@@ -48,7 +48,7 @@ function Cards({talkie, rabbit, shield}) {
               <Card.Body>
                 <Card.Title><h1 style={{fontWeight: 'bold', textAlign: 'left'}}>Heading Two</h1></Card.Title>
               
-                  <p style={{textAlign: 'left'}}>
+                  <p className="card-text" style={{textAlign: 'left'}}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod, tempor incididunt ut labore et dolore
                   </p>
                 

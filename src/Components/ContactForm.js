@@ -7,8 +7,8 @@ function ContactForm() {
     return(
         <>
         
-         <Row className='contactHeaderMargin' >
-            <Col align='center'>
+         {/* <Row className='contactHeaderMargin'  >
+            <Col align='center' > */}
                 <h1 className='formTitle formTitleSmall' >Heading Two</h1>
                 <form  >
                     <input type='text' name='firstName' placeholder='First Name' className='formControl' />
@@ -19,8 +19,8 @@ function ContactForm() {
                     <button type='submit' className='contact-btn'>Submit</button>
                 </form>
                
-             </Col>
-        </Row> 
+             {/* </Col>
+        </Row>  */}
        
         </>
     )
