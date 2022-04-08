@@ -27,6 +27,10 @@
 	font-size: 20px;
 	padding-right: 3rem;
 }
+.contactLink:hover {
+	text-decoration: none;
+	color: #debf79;
+}
 
 @media (max-width: 767px) {
 	.homeBody {
@@ -36,8 +40,9 @@
 	h1 {
 		text-align: left;
 	}
+	
 	.contactLink {
-		padding-right: 1.5rem;
+		margin-right: 1rem;
 	}
 
 }

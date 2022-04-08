@@ -1,6 +1,6 @@
 //import '../styles/globals.css'
-import '../styles/App.css';
-import '../styles/Contact.css';
+import '../styles/app.css';
+import '../styles/contact.css';
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
