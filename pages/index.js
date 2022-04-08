@@ -10,11 +10,22 @@ import rabbit from "../assets/Rabbit.png";
 import shield from "../assets/Shield.png";
 import usersArray from '../Users.js';
 
+const defaultEndPoint = 'https://api.mwi.dev/content/home';
 
+export async function getServerSideProps() {
+  const res = await fetch(defaultEndPoint)
+  const data = await res.json();
+  return {
+    props: {
+      data
+    }
+  }
 
-export default function Home() {
+}
 
+export default function Home({data}) {
 
+  console.log(data)
 
  const [isList, setList] = useState(false);
  

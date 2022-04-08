@@ -7,9 +7,19 @@ import Logo from '../assets/Logo.png'
 import {Container, Row, Col} from 'react-bootstrap'
 import ContactForm from '../components/ContactForm.js'
 
+const defaultEndPoint = 'https://api.mwi.dev/content/contact'
+export async function getServerSideProps() {
+  const res = await fetch(defaultEndPoint)
+  const data = await res.json();
+  return {
+    props: {
+      data
+    }
+  }
+}
 
-function Contact() {
-
+function Contact({data}) {
+console.log(data)
 
 
   return (
