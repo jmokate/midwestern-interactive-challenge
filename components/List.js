@@ -5,8 +5,8 @@ function List(props) {
 
   return(
     <>
-    <Row>
-          <Col style={{}}>
+    <Row >
+          <Col >
           <h1 style={{color: '#f5f5f5', fontSize: '50px', fontWeight: 'bold'}}>Heading One</h1>
           <hr style={{color: '#debf79', width: "12rem", height: '5%', opacity: '100'}}/>
           <p style={{color: '#f5f5f5'}} >Click here</p>

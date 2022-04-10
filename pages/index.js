@@ -38,28 +38,29 @@ export default function Home({data}) {
 
   return (
     <>
-    <Container fluid className="homeBody">
-
-    
-    <Container>
-      <HomeMenu src={logo} />
+    <Container fluid className="homeBody" style={{minHeight: '100vh'}}>
+      
+   
+      <Container>
+        <HomeMenu src={logo} />
+      </Container>
+      
+        <Container className="px-4" style={{paddingTop: "3rem"}}>
+          <Cards
+            talkie={talkie}
+            rabbit={rabbit}
+            shield={shield}
+          />
+        </Container>
+        <Container className="px-4 mt-5" >
+          <UsersList
+            handleClick={handleClick}
+            isList={isList}
+            usersArray={usersArray}
+          />
+        </Container>
+      
     </Container>
-    
-      <Container className="px-4" style={{paddingTop: "3rem"}}>
-        <Cards
-          talkie={talkie}
-          rabbit={rabbit}
-          shield={shield}
-         />
-      </Container>
-      <Container className="px-4 mt-5">
-        <UsersList
-          handleClick={handleClick}
-          isList={isList}
-          usersArray={usersArray}
-        />
-      </Container>
-      </Container>
     </>
   );
 }
