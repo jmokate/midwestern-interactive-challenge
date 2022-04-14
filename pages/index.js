@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomeMenu from '../components/HomeMenu.js';
-import Cards from '../components/Cards.js';
+import CardGroup from '../components/CardGroup.js';
 import UsersList from '../components/UsersList.js'
 import {Container} from 'react-bootstrap';
 import logo from "../assets/Logo.png";
@@ -46,7 +46,8 @@ export default function Home({data}) {
       </Container>
       
         <Container className="px-4" style={{paddingTop: "3rem"}}>
-          <Cards
+          <CardGroup
+            data={data}
             talkie={talkie}
             rabbit={rabbit}
             shield={shield}
