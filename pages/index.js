@@ -14,18 +14,20 @@ const defaultEndPoint = 'https://api.mwi.dev/content/home';
 
 export async function getServerSideProps() {
   const res = await fetch(defaultEndPoint)
-  const data = await res.json();
+  const response = await res.json();
   return {
     props: {
-      data
+      response
     }
   }
 
 }
 
-export default function Home({data}) {
+export default function Home({response}) {
+  
 
-  console.log(data)
+let {data} = response;
+  console.log('results baby', data)
 
  const [isList, setList] = useState(false);
  
