@@ -9,13 +9,29 @@ function ContactForm() {
         title: "",
         email: "",
         message: ""
-    })
+    });
+
+    const [formData, setFormData] = useState();
 
     const handleChange = (event) => {
-        const {value} = event;
-        const name = event.target.name;
-        
+        const {value, name} = event.target;
         setFormValues({...formValues, [name]: value })
+    }
+
+    const handleSubmit = (event) => {
+        const {name, value} = event.target
+        console.log(event)
+        event.preventDefault();
+        for (const key in formValues) {
+            //console.log(key, formValues[key])
+            if (key.value == "") {
+                alert("Please complete the form")
+            }
+        }
+         
+            // setFormData(formValues);
+            // console.log('new values to submit', formData)
+        
     }
 
     return(
@@ -25,7 +41,7 @@ function ContactForm() {
             <Col align='center' > */}
             <div className='contactHeaderMargin'>
                 <h1 className='formTitle formTitleSmall' >Heading Two</h1>
-                <form  >
+                <form onSubmit={handleSubmit}  >
                     <input type='text' name='first_name' placeholder='First Name' value={formValues.first_name} onChange={handleChange} className='formControl' />
                     <input type='text' name='last_name' placeholder='Last Name' value={formValues.last_name} onChange={handleChange} className='formControl' />
                     <input type='text' name='title' placeholder='Title' value={formValues.title} onChange={handleChange} className='formControl' />
