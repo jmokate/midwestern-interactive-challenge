@@ -11,6 +11,8 @@ function ContactForm() {
         message: ""
     });
 
+    const [formErrors, setFormErrors] = useState({});
+
     const [formData, setFormData] = useState();
 
     const handleChange = (event) => {
@@ -22,16 +24,15 @@ function ContactForm() {
         const {name, value} = event.target
         console.log(event)
         event.preventDefault();
-        for (const key in formValues) {
-            //console.log(key, formValues[key])
-            if (key.value == "") {
-                alert("Please complete the form")
-            }
-        }
+        setFormErrors(validate(formValues))
          
             // setFormData(formValues);
             // console.log('new values to submit', formData)
         
+    }
+
+    const validate = (values) => {
+
     }
 
     return(
