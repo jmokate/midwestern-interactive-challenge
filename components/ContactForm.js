@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react';
+import {Alert} from 'react-bootstrap';
 
 
 function ContactForm() {
@@ -12,6 +13,7 @@ function ContactForm() {
     });
 
     const [formErrors, setFormErrors] = useState({});
+    const [isSubmit, setIsSubmit] = useState(false);
 
     const [formData, setFormData] = useState();
 
@@ -25,14 +27,36 @@ function ContactForm() {
         console.log(event)
         event.preventDefault();
         setFormErrors(validate(formValues))
+        setIsSubmit(true)
          
             // setFormData(formValues);
             // console.log('new values to submit', formData)
         
     }
-
+    useEffect(() => {
+        console.log(formErrors);
+        if(Object.keys(formErrors).length === 0 && isSubmit) {
+            console.log(formValues);
+        }
+    }, [formErrors])
     const validate = (values) => {
-
+        const errors = {};
+        const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/i;
+        if (!values.first_name) {
+            errors.first_name = 'First name required';
+        }
+        if (!values.last_name) {
+            errors.last_name = 'Last name required';
+        }
+        if (!values.title) {
+            errors.title = 'Title required';
+        }
+        if (!values.email) {
+            errors.email = 'Email required';
+        } else if (!regex.test(values.email)) {
+            errors.email = 'This is not a valid email format';
+        }
+        return errors;
     }
 
     return(
@@ -42,10 +66,20 @@ function ContactForm() {
             <Col align='center' > */}
             <div className='contactHeaderMargin'>
                 <h1 className='formTitle formTitleSmall' >Heading Two</h1>
+                {Object.keys(formErrors).length === 0 && isSubmit ?
+                    (<Alert variant='success'>
+                        Thank you :)
+                    </Alert>) : null
+                }
+                
                 <form onSubmit={handleSubmit}  >
+                    <span>{formErrors.first_name}</span>
                     <input type='text' name='first_name' placeholder='First Name' value={formValues.first_name} onChange={handleChange} className='formControl' />
+                    <span>{formErrors.last_name}</span>
                     <input type='text' name='last_name' placeholder='Last Name' value={formValues.last_name} onChange={handleChange} className='formControl' />
+                    <span>{formErrors.title}</span>
                     <input type='text' name='title' placeholder='Title' value={formValues.title} onChange={handleChange} className='formControl' />
+                    <span>{formErrors.email}</span>
                     <input type='text' name='email' placeholder='Email' value={formValues.email} onChange={handleChange} className='formControl' />
                     <textarea type='text' as='textarea' name='message' placeholder='Message' value={formValues.message} onChange={handleChange} className='formControlMessageBox' />
                     <button type='submit' className='contact-btn'>Submit</button>
