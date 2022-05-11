@@ -71,6 +71,17 @@ textarea[type='text'] {padding: 20px;}
 	border: none;
 }
 
+.formSuccess {
+	width: 83%;
+}
+
+.errors {
+	font-size: 10px;
+	color: red;
+	display: inline-block;
+    vertical-align: top;
+}
+
 .contact-btn {
 	border:none;
 	background-color: #debf79;
@@ -135,6 +146,11 @@ textarea[type='text'] {padding: 20px;}
 		height: 15rem;
 		border: none;
 	}
+	.formSuccess {
+		width: 100%;
+	}
+
+	
 
 
 }

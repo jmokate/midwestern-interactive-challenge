@@ -28,6 +28,7 @@ function ContactForm() {
         event.preventDefault();
         setFormErrors(validate(formValues))
         setIsSubmit(true)
+        postForm();
          
             // setFormData(formValues);
             // console.log('new values to submit', formData)
@@ -59,27 +60,40 @@ function ContactForm() {
         return errors;
     }
 
+    const postForm = async() => {
+        const response = await fetch('/api/contact', {
+            method: 'POST',
+            body: JSON.stringify({formValues}),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        const data = await response.json
+        console.log(data)
+    }
+
     return(
         <>
         
          {/* <Row className='contactHeaderMargin'  >
             <Col align='center' > */}
             <div className='contactHeaderMargin'>
-                <h1 className='formTitle formTitleSmall' >Heading Two</h1>
-                {Object.keys(formErrors).length === 0 && isSubmit ?
-                    (<Alert variant='success'>
+            {Object.keys(formErrors).length === 0 && isSubmit ?
+                    (<Alert style={{margin: 'none'}} className='formSuccess' variant='success'>
                         Thank you :)
                     </Alert>) : null
                 }
+                <h1 className='formTitle formTitleSmall' >Heading Two</h1>
+                
                 
                 <form onSubmit={handleSubmit}  >
-                    <span>{formErrors.first_name}</span>
+                    <p className='errors' >{formErrors.first_name}</p>
                     <input type='text' name='first_name' placeholder='First Name' value={formValues.first_name} onChange={handleChange} className='formControl' />
-                    <span>{formErrors.last_name}</span>
+                    <span className='errors'>{formErrors.last_name}</span>
                     <input type='text' name='last_name' placeholder='Last Name' value={formValues.last_name} onChange={handleChange} className='formControl' />
-                    <span>{formErrors.title}</span>
+                    <span className='errors'>{formErrors.title}</span>
                     <input type='text' name='title' placeholder='Title' value={formValues.title} onChange={handleChange} className='formControl' />
-                    <span>{formErrors.email}</span>
+                    <span className='errors'>{formErrors.email}</span>
                     <input type='text' name='email' placeholder='Email' value={formValues.email} onChange={handleChange} className='formControl' />
                     <textarea type='text' as='textarea' name='message' placeholder='Message' value={formValues.message} onChange={handleChange} className='formControlMessageBox' />
                     <button type='submit' className='contact-btn'>Submit</button>
