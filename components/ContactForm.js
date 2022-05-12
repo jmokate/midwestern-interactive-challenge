@@ -29,11 +29,21 @@ function ContactForm() {
         setFormErrors(validate(formValues))
         setIsSubmit(true)
         postForm();
+        resetForm();
          
             // setFormData(formValues);
             // console.log('new values to submit', formData)
-        
     }
+
+    const resetForm = () => {
+        setFormValues({
+            first_name: "",
+            last_name: "",
+            title: "",
+            email: "",
+            message: ""
+        });
+    };
     useEffect(() => {
         console.log(formErrors);
         if(Object.keys(formErrors).length === 0 && isSubmit) {
@@ -61,7 +71,7 @@ function ContactForm() {
     }
 
     const postForm = async() => {
-        const response = await fetch('/api/contact', {
+        const response = await fetch('https://api.mwi.dev/contact', {
             method: 'POST',
             body: JSON.stringify({formValues}),
             headers: {
