@@ -1,0 +1,160 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+
+
+
+.contactBody {
+	
+	background: linear-gradient(
+		to right,
+		#222222 0%,
+		#222222 50%,
+		#f5f5f5 50%,
+		#f5f5f5 100%
+	);
+	padding: 5%;
+	height: 100vh;
+}
+
+@font-face {
+	font-family: "Poppins", sans-serif;
+	src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+}
+
+.contactLink {
+	color: #debf79;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 20px;
+	padding-right: 3rem;
+}
+
+.contactHeaderMargin {
+	margin-top: 5rem;
+}
+
+.contactHeadingOne {
+	
+	width: 75%;
+	
+}
+
+.contactHeaderTxt {
+	color: #f5f5f5;
+	font-size: 17px;
+}
+
+
+.formTitle {
+	text-align: left;
+	font-size: 40px;
+	font-weight: bold;
+	width: 85%;
+	
+}
+
+.formControl {
+	background-color: #dad6d6a5;
+	width: 40%;
+	margin: .5rem;
+	height: 3rem;
+	border: none;
+}
+input[type='text'] {padding-left: 20px;}
+textarea[type='text'] {padding: 20px;}
+
+.formControlMessageBox {
+	background-color: #dad6d6a5;
+	width: 83%;
+	margin: .5rem;
+	height: 10rem;
+	border: none;
+}
+
+.formSuccess {
+	width: 83%;
+}
+
+.errors {
+	font-size: 10px;
+	color: red;
+	display: inline-block;
+    vertical-align: top;
+}
+
+.contact-btn {
+	border:none;
+	background-color: #debf79;
+	color: #f5f5f5;
+	border-radius: 0;
+	height: 3rem;
+	width: 8rem;
+	margin-top: 1rem;
+	text-align: center;
+
+}
+
+@media (max-width: 767px) {
+	.contactBody {
+		height: 100%;
+		background: linear-gradient(
+			to bottom,
+			#222222 0em,
+			#222222 25em,
+			#f5f5f5 25em,
+			#f5f5f5 100em
+		);
+	}
+
+	.contactHeadingOne {
+		height: 100%;
+		width: 100%;
+		
+	}
+
+.contactHeaderMargin {
+	margin-top: 5rem;
+}
+.formTitle {
+	text-align: left;
+	font-size: 40px;
+	font-weight: bold;
+	width: 100%;
+	
+}
+	.contactLink {
+		padding-right: 1.5rem;
+	}
+	.formSmall {
+		margin-top: -9rem;
+	}
+	.formControl {
+		background-color: #dad6d6a5;
+		width: 100%;
+		margin-bottom: .25rem;
+		margin-right: auto;
+		margin-left:auto;
+		height: 3rem;
+		border: none;
+	}
+	.formControlMessageBox {
+		background-color: #dad6d6a5;
+		width: 100%;
+		margin-bottom: 1rem;
+		margin-right: auto;
+		margin-left:auto;
+		height: 15rem;
+		border: none;
+	}
+	.formSuccess {
+		width: 100%;
+	}
+
+	
+
+
+}
+
+
+
+
