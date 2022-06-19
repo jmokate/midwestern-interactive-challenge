@@ -6,7 +6,7 @@ queryAllContent = async () => {
         const results = await pool.query(
             "SELECT * from home"
         );
-        console.table(results.rows);
+        console.table(results);
     } catch (err) {
         console.log('Content not queried ', err);
         return[];

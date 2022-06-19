@@ -5,7 +5,7 @@ const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 const pgAccess = require('../utils/dbConnect.js');
-const homeContentAccess = require('../utils/homeAccess');
+const homeContentAccess = require('../utils/homeAccess.js');
     
 app.prepare()
 .then(() => {
