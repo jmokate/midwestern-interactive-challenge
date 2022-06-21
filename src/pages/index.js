@@ -29,6 +29,18 @@ export default function Home({response}) {
 let {data} = response;
   console.log('results baby', data)
 
+const postHomeData = async () => {
+  const response = await fetch('/api/home', {
+    method: 'POST',
+    body: JSON.stringify({data}), //already deconstructed? check.
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  const homeData = await response.json()
+  console.log(homeData)
+}
+
  const [isList, setList] = useState(false);
  
 

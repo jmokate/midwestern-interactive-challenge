@@ -1,6 +1,5 @@
 const express = require('express');
-const next = require('next');
-    
+const next = require('next');  
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
@@ -20,11 +19,11 @@ app.prepare()
   });
 
   pgAccess.connectToDb();
-  homeContentAccess.queryAllContent();
+  //homeContentAccess.queryAllContent();
 
   //ROUTES
-  // const homeContentRoute = require('../routes/homeRoute');
-  // app.use('/api/home', homeContentRoute);
+  const homeContentRoute = require('../routes/homeRoute');
+  app.use('/api/home', homeContentRoute);
     
   server.listen(3000, (err) => {
     if (err) throw err
