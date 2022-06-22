@@ -10,6 +10,17 @@ app.prepare()
 .then(() => {
   const server = express()
 
+  server.use(express.json());
+  server.use(express.urlencoded({extended: false}));
+
+  server.post('/api/home', async (req, res) => {
+    console.log('i got a POST')
+    console.log('SERVER POST', req.body)
+
+    await homeContentAccess.postAllContent(req.body)
+    
+  });
+
   server.get('/api/test', (req, res) => {
     return res.end('hello!')
   });
@@ -23,7 +34,7 @@ app.prepare()
 
   //ROUTES
   const homeContentRoute = require('../routes/homeRoute');
-  app.use('/api/home', homeContentRoute);
+  //app.use('/api/home', homeContentRoute);
     
   server.listen(3000, (err) => {
     if (err) throw err

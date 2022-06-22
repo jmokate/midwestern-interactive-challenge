@@ -14,4 +14,18 @@ queryAllContent = async () => {
     }
 };
 
-module.exports = {queryAllContent};
+postAllContent = async (passedData) => {
+    let pool = await dbConnect.connectToDb();
+    try {
+        console.log('POSTGRES POST', passedData)
+        // const results = await pool.query(
+        //     "SELECT * from home"
+        // );
+        // console.table(results);
+    } catch (err) {
+        console.log('Content not queried ', err);
+        return[];
+    }
+};
+
+module.exports = {queryAllContent, postAllContent};
