@@ -15,7 +15,7 @@ app.prepare()
 
   server.post('/api/home', async (req, res) => {
     console.log('i got a POST')
-    console.log('SERVER POST', req.body)
+    //console.log('SERVER POST', req.body)
 
     await homeContentAccess.postAllContent(req.body)
     
