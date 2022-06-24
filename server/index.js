@@ -14,8 +14,14 @@ app.prepare()
   server.use(express.urlencoded({extended: false}));
 
   server.post('/api/home', async (req, res) => {
+    const {data} = req.body
     console.log('i got a POST')
-    //console.log('SERVER POST', req.body)
+    console.log('SERVER POST ONE', data)
+    // let mappedData = req.body.data.map(obj => {
+    //   obj.id = req.body.data.id,
+    //   obj.page_id = req.body.data.page_id
+    // })
+    // console.log('this is mapped data', mappedData)
 
     await homeContentAccess.postAllContent(req.body)
     
@@ -30,7 +36,7 @@ app.prepare()
   });
 
   pgAccess.connectToDb();
-  //homeContentAccess.queryAllContent();
+  homeContentAccess.queryAllContent();
 
   //ROUTES
   const homeContentRoute = require('../routes/homeRoute');
